@@ -43,7 +43,11 @@ def deploy_ddl(sql):
         print("Error while deploying DDL ....")
         raise
 
-
+def create(filename,txt):
+    f = open("C:\\Devops\\Devops_testing\\sql\\"+filename+".sql","w")
+    f.write(txt)
+    f.close()
+    
 #def hello_world(request):
 def hello_world():#data-engineering-gcp-practice:Example_dataset1_stg.Emp_details
     print("yes")
@@ -105,15 +109,17 @@ def hello_world():#data-engineering-gcp-practice:Example_dataset1_stg.Emp_detail
         
         if (ENTITY_TYPE.__eq__('SP')):
             SQL_QUERY = SQL_QUERY.replace('CREATE PROCEDURE `' + SOURCE_PROJECT_NAME + '`.' + DATASET_NAME + '.' + ENTITY_NAME + '()','CREATE OR REPLACE PROCEDURE `' + TARGET_PROJECT_NAME + '.' + TARGET_DATASET_NAME + '.' + ENTITY_NAME + '`()')
+            create(ENTITY_NAME,SQL_QUERY)
         elif (ENTITY_TYPE.__eq__('TABLE')):             
             SQL_QUERY = SQL_QUERY.replace('CREATE TABLE `' + SOURCE_PROJECT_NAME + '.' + DATASET_NAME + '.' + ENTITY_NAME + '`','CREATE OR REPLACE TABLE `' + TARGET_PROJECT_NAME + '.' + TARGET_DATASET_NAME + '.' + ENTITY_NAME + '`')
+            create(ENTITY_NAME,SQL_QUERY)
         elif (ENTITY_TYPE.__eq__('VIEW')):
             #print("view=============",'CREATE VIEW `' + SOURCE_PROJECT_NAME + '.' + DATASET_NAME + '.' + ENTITY_NAME + '` AS') 
             SQL_QUERY = SQL_QUERY.replace('CREATE VIEW `' + SOURCE_PROJECT_NAME + '.' + DATASET_NAME + '.' + ENTITY_NAME + '`','CREATE OR REPLACE VIEW `' + TARGET_PROJECT_NAME + '.' + TARGET_DATASET_NAME + '.' + ENTITY_NAME + '`')
             #SQL_QUERY = SQL_QUERY.replace('CREATE VIEW `' + SOURCE_PROJECT_NAME + '.' + DATASET_NAME + '.' + ENTITY_NAME + '` AS','CREATE OR REPLACE VIEW `'+TARGET_PROJECT_NAME+ '.' + TARGET_DATASET_NAME+ '.' +ENTITY_NAME+ '` AS')
             #print("view after...",'CREATE OR REPLACE VIEW `'+TARGET_PROJECT_NAME+ '.' + TARGET_DATASET_NAME+ '.' +ENTITY_NAME+ '` AS')
-            #SQL_QUERY=SQL_QUERY
             #print("VIEW SQL_QUERY:::",SQL_QUERY)
+            create(ENTITY_NAME,SQL_QUERY)
         else:
             raise Exception("ENTITY TYPE NOT FOUND")
         print("*****************after***************")
