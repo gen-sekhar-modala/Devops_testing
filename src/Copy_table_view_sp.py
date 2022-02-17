@@ -9,6 +9,7 @@ import time
 import traceback
 import json
 import datetime
+from data import * 
 #from flask import request
 
 CREATE_TABLE = ("SELECT * FROM  `{SOURCE_PROJECT_NAME}.{DATASET}.INFORMATION_SCHEMA.TABLES` WHERE table_name= '{TABLE_NAME}' ;")
@@ -52,8 +53,10 @@ def create(filename,txt):
 def hello_world():#data-engineering-gcp-practice:Example_dataset1_stg.Emp_details
     print("yes")
     try:  
-        data = '{"ENTITY_TYPE":"TABLE","DATASET_NAME":"Example_dataset1_stg","TARGET_DATASET_NAME":"Example_dataset1","ENTITY_NAME":"Emp_details","TARGET_PROJECT_NAME":"data-engineering-gcp-practice","SOURCE_PROJECT_NAME":"data-engineering-gcp-practice","BACKUP_DATASET":"Example_dataset"}'
-        data_json = json.loads(data)
+        #data = '{"ENTITY_TYPE":"TABLE","DATASET_NAME":"Example_dataset1_stg","TARGET_DATASET_NAME":"Example_dataset1","ENTITY_NAME":"Emp_department","TARGET_PROJECT_NAME":"data-engineering-gcp-practice","SOURCE_PROJECT_NAME":"data-engineering-gcp-practice","BACKUP_DATASET":"Example_dataset"}'
+        #data_json = json.loads(data)
+        data_json= dict1
+        print(type(data_json))
         print("data_json ::", data_json)
         QUERY = ''
         result_list = []
@@ -131,3 +134,28 @@ def hello_world():#data-engineering-gcp-practice:Example_dataset1_stg.Emp_detail
         logger.error(" ENTITY NOT FOUND  {}".format(e))  
 
 hello_world()        
+
+
+
+import  git 
+from git import Repo
+def git_commit_push():
+    repo = git.Repo('C:\Devops\Devops_testing')
+    origin = repo.remote(name='origin')
+    origin.pull()
+    print(repo.git.status())
+    repo.git.add('--all')
+    #changedFiles = repo.git.diff('HEAD~1..HEAD', name_only=True)
+    t = repo.head.commit.tree
+    changedFiles =repo.git.diff(t)
+    #changedFiles = repo.git.diff()
+    print("=====================================")
+    print("changedFiles are :", changedFiles)    
+    print("=====================================")  
+    if (changedFiles):
+        repo.git.commit('-m', 'SQL files')
+        origin = repo.remote(name='origin')
+        origin.push()
+    else:
+        print("No files updated")
+git_commit_push()
