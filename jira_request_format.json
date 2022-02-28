@@ -1,0 +1,196 @@
+{
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations,customfield_10010.requestTypePractice",
+  "id": "10000",
+  "self": "https://kapoorakashgenpact.atlassian.net/rest/api/3/issue/10000",
+  "key": "DEV-1",
+  "fields": {
+    "statuscategorychangedate": "2022-02-22T20:50:18.780+0530",
+    "issuetype": {
+      "self": "https://kapoorakashgenpact.atlassian.net/rest/api/3/issuetype/10002",
+      "id": "10002",
+      "description": "Tasks track small, distinct pieces of work.",
+      "iconUrl": "https://kapoorakashgenpact.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+      "name": "Task",
+      "subtask": false,
+      "avatarId": 10318,
+      "entityId": "b741d232-8eb8-438d-8196-662121b8a792",
+      "hierarchyLevel": 0
+    },
+    "timespent": null,
+    "project": {
+      "self": "https://kapoorakashgenpact.atlassian.net/rest/api/3/project/10000",
+      "id": "10000",
+      "key": "DEV",
+      "name": "DevOps",
+      "projectTypeKey": "software",
+      "simplified": true,
+      "avatarUrls": {
+        "48x48": "https://kapoorakashgenpact.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10424",
+        "24x24": "https://kapoorakashgenpact.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10424?size=small",
+        "16x16": "https://kapoorakashgenpact.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10424?size=xsmall",
+        "32x32": "https://kapoorakashgenpact.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10424?size=medium"
+      }
+    },
+    "fixVersions": [],
+    "aggregatetimespent": null,
+    "resolution": null,
+    "resolutiondate": null,
+    "workratio": -1,
+    "lastViewed": "2022-02-28T16:38:26.555+0530",
+    "issuerestriction": {
+      "issuerestrictions": {},
+      "shouldDisplay": true
+    },
+    "watches": {
+      "self": "https://kapoorakashgenpact.atlassian.net/rest/api/3/issue/DEV-1/watchers",
+      "watchCount": 1,
+      "isWatching": true
+    },
+    "created": "2022-02-22T20:50:17.580+0530",
+    "customfield_10020": [
+      {
+        "id": 1,
+        "name": "DEV Sprint 1",
+        "state": "future",
+        "boardId": 1
+      }
+    ],
+    "customfield_10021": null,
+    "customfield_10022": null,
+    "priority": {
+      "self": "https://kapoorakashgenpact.atlassian.net/rest/api/3/priority/3",
+      "iconUrl": "https://kapoorakashgenpact.atlassian.net/images/icons/priorities/medium.svg",
+      "name": "Medium",
+      "id": "3"
+    },
+    "customfield_10023": null,
+    "customfield_10024": null,
+    "customfield_10025": null,
+    "labels": [],
+    "customfield_10016": null,
+    "customfield_10017": null,
+    "customfield_10018": {
+      "hasEpicLinkFieldDependency": false,
+      "showField": false,
+      "nonEditableReason": {
+        "reason": "PLUGIN_LICENSE_ERROR",
+        "message": "The Parent Link is only available to Jira Premium users."
+      }
+    },
+    "customfield_10019": "0|hzzzzz:",
+    "timeestimate": null,
+    "aggregatetimeoriginalestimate": null,
+    "versions": [],
+    "issuelinks": [],
+    "assignee": null,
+    "updated": "2022-02-22T20:50:17.580+0530",
+    "status": {
+      "self": "https://kapoorakashgenpact.atlassian.net/rest/api/3/status/10000",
+      "description": "",
+      "iconUrl": "https://kapoorakashgenpact.atlassian.net/",
+      "name": "To Do",
+      "id": "10000",
+      "statusCategory": {
+        "self": "https://kapoorakashgenpact.atlassian.net/rest/api/3/statuscategory/2",
+        "id": 2,
+        "key": "new",
+        "colorName": "blue-gray",
+        "name": "To Do"
+      }
+    },
+    "components": [],
+    "timeoriginalestimate": null,
+    "description": {
+      "version": 1,
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Test task for DevOps POC"
+            }
+          ]
+        }
+      ]
+    },
+    "customfield_10010": null,
+    "customfield_10014": null,
+    "customfield_10015": null,
+    "timetracking": {},
+    "customfield_10005": null,
+    "customfield_10006": null,
+    "security": null,
+    "customfield_10007": null,
+    "customfield_10008": null,
+    "aggregatetimeestimate": null,
+    "customfield_10009": null,
+    "attachment": [],
+    "summary": "Test task 1",
+    "creator": {
+      "self": "https://kapoorakashgenpact.atlassian.net/rest/api/3/user?accountId=70121%3Ae7951dfb-064c-45f2-8d42-798908122c25",
+      "accountId": "70121:e7951dfb-064c-45f2-8d42-798908122c25",
+      "emailAddress": "kapoorakash1985@gmail.com",
+      "avatarUrls": {
+        "48x48": "https://secure.gravatar.com/avatar/2617de0dce7e7205959a0426f775be62?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAK-3.png",
+        "24x24": "https://secure.gravatar.com/avatar/2617de0dce7e7205959a0426f775be62?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAK-3.png",
+        "16x16": "https://secure.gravatar.com/avatar/2617de0dce7e7205959a0426f775be62?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAK-3.png",
+        "32x32": "https://secure.gravatar.com/avatar/2617de0dce7e7205959a0426f775be62?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAK-3.png"
+      },
+      "displayName": "Akash Kapoor",
+      "active": true,
+      "timeZone": "Europe/London",
+      "accountType": "atlassian"
+    },
+    "subtasks": [],
+    "reporter": {
+      "self": "https://kapoorakashgenpact.atlassian.net/rest/api/3/user?accountId=70121%3Ae7951dfb-064c-45f2-8d42-798908122c25",
+      "accountId": "70121:e7951dfb-064c-45f2-8d42-798908122c25",
+      "emailAddress": "kapoorakash1985@gmail.com",
+      "avatarUrls": {
+        "48x48": "https://secure.gravatar.com/avatar/2617de0dce7e7205959a0426f775be62?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAK-3.png",
+        "24x24": "https://secure.gravatar.com/avatar/2617de0dce7e7205959a0426f775be62?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAK-3.png",
+        "16x16": "https://secure.gravatar.com/avatar/2617de0dce7e7205959a0426f775be62?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAK-3.png",
+        "32x32": "https://secure.gravatar.com/avatar/2617de0dce7e7205959a0426f775be62?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAK-3.png"
+      },
+      "displayName": "Akash Kapoor",
+      "active": true,
+      "timeZone": "Europe/London",
+      "accountType": "atlassian"
+    },
+    "customfield_10000": "{}",
+    "aggregateprogress": {
+      "progress": 0,
+      "total": 0
+    },
+    "customfield_10001": null,
+    "customfield_10002": null,
+    "customfield_10003": null,
+    "customfield_10004": null,
+    "environment": null,
+    "duedate": null,
+    "progress": {
+      "progress": 0,
+      "total": 0
+    },
+    "votes": {
+      "self": "https://kapoorakashgenpact.atlassian.net/rest/api/3/issue/DEV-1/votes",
+      "votes": 0,
+      "hasVoted": false
+    },
+    "comment": {
+      "comments": [],
+      "self": "https://kapoorakashgenpact.atlassian.net/rest/api/3/issue/10000/comment",
+      "maxResults": 0,
+      "total": 0,
+      "startAt": 0
+    },
+    "worklog": {
+      "startAt": 0,
+      "maxResults": 20,
+      "total": 0,
+      "worklogs": []
+    }
+  }
+}
