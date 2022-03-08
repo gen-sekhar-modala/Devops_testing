@@ -44,19 +44,26 @@ def deploy_ddl(sql):
         raise
 
 
-def hello_world(request):
+def hello_world():
     try:  
-        data = request.data
-        data_json = json.loads(data)
-        print("data_json ::", data_json)
-        QUERY = ''
-        result_list = []
-        ENTITY_TYPE = data_json["ENTITY_TYPE"]
-        DATASET_NAME = data_json["DATASET_NAME"]
-        TARGET_DATASET_NAME = data_json["TARGET_DATASET_NAME"]
-        ENTITY_NAME = data_json["ENTITY_NAME"]
-        SOURCE_PROJECT_NAME = data_json["SOURCE_PROJECT_NAME"]
-        TARGET_PROJECT_NAME = data_json["TARGET_PROJECT_NAME"]
+#        data = request.data
+#        data_json = json.loads(data)
+#        print("data_json ::", data_json)
+#        QUERY = ''
+#        result_list = []
+#        ENTITY_TYPE = data_json["ENTITY_TYPE"]
+#        DATASET_NAME = data_json["DATASET_NAME"]
+#        TARGET_DATASET_NAME = data_json["TARGET_DATASET_NAME"]
+#        ENTITY_NAME = data_json["ENTITY_NAME"]
+#        SOURCE_PROJECT_NAME = data_json["SOURCE_PROJECT_NAME"]
+#        TARGET_PROJECT_NAME = data_json["TARGET_PROJECT_NAME"]
+        #import os
+        ENTITY_TYPE=os.environ.get("ENTITY_TYPE")
+        DATASET_NAME=os.environ.get("DATASET_NAME")
+        TARGET_DATASET_NAME=os.environ.get("TARGET_DATASET_NAME")
+        ENTITY_NAME=os.environ.get("ENTITY_NAME")
+        TARGET_PROJECT_NAME=os.environ.get("TARGET_PROJECT_NAME")
+        SOURCE_PROJECT_NAME=os.environ.get("SOURCE_PROJECT_NAME")  
         print("Request values::ENTITY_TYPE=", ENTITY_TYPE, " ... DATASET_NAME=", DATASET_NAME, " ...ENTITY_NAME=",ENTITY_NAME)
 
         SQL_QUERY = ''
@@ -93,4 +100,10 @@ def hello_world(request):
         print("Successfully deployed DDL in target...")
         print(SQL_QUERY)
     except Exception as e:
-        logger.error(" ENTITY NOT FOUND  {}".format(e))    
+        logger.error(" ENTITY NOT FOUND  {}".format(e)) 
+        
+
+        
+print("Started...")
+hello_world()
+print("Completed function....")
