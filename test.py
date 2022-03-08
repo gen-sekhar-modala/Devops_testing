@@ -1,5 +1,6 @@
 import os
-project=os.environ.get("project_name")
-print("project....=",project)
-print("SRK........{}")
+EnvironmentID=os.environ.get("EnvironmentID")
+PipelineName=os.environ.get("PipelineName")
+print("project....=",PipelineName)
+print("SRK........{}",EnvironmentID)
 print("98765........")
